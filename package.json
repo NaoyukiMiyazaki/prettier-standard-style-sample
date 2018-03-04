@@ -1,0 +1,51 @@
+{
+  "name": "prettier-standard-style-sample",
+  "version": "1.0.0",
+  "description": "prettier with JavaScript Standard Style Sample",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "format": "npm run format:js & npm run format:scss",
+    "format:js": "prettier-standard src/**/*.js",
+    "format:scss": "prettier-stylelint --write src/**/*.scss"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run format:js",
+      "git add"
+    ],
+    "*.scss": [
+      "npm run format:scss",
+      "git add"
+    ]
+  },
+  "prettier": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample/issues"
+  },
+  "homepage": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier-standard": "^8.0.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint-config-idiomatic-order": "^5.0.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-idiomatic-order",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
+    "rules": {
+      "indentation": 4,
+      "string-quotes": "single"
+    }
+  }
+}
