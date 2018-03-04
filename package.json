@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "format": "npm run format:js & npm run format:scss",
-    "format:js": "prettier-standard src/**/*.js",
+    "format:js": "eslint --fix src",
     "format:scss": "prettier-stylelint --write src/**/*.scss"
   },
   "lint-staged": {
@@ -19,7 +19,11 @@
       "git add"
     ]
   },
-  "prettier": {},
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample.git"
@@ -32,8 +36,12 @@
   },
   "homepage": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample#readme",
   "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
     "prettier-standard": "^8.0.0",
     "prettier-stylelint": "^0.4.2",
     "stylelint-config-idiomatic-order": "^5.0.0"
