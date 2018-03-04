@@ -6,7 +6,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "format": "npm run format:js & npm run format:scss",
-    "format:js": "prettier --write src/**/*.js",
+    "format:js": "prettier-standard src/**/*.js",
     "format:scss": "prettier-stylelint --write src/**/*.scss"
   },
   "lint-staged": {
@@ -39,6 +39,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier": "^1.11.1",
+    "prettier-standard": "^8.0.0",
     "prettier-stylelint": "^0.4.2",
     "stylelint-config-idiomatic-order": "^5.0.0"
   },
