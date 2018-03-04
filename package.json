@@ -10,31 +10,14 @@
     "format:scss": "prettier-stylelint --write src/**/*.scss"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run format:js",
-      "git add"
-    ],
-    "*.scss": [
-      "npm run format:scss",
-      "git add"
-    ]
+    "*.js": ["npm run format:js", "git add"],
+    "*.scss": ["npm run format:scss", "git add"]
   },
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample/issues"
-  },
-  "homepage": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample#readme",
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
@@ -52,5 +35,16 @@
       "indentation": 4,
       "string-quotes": "single"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample/issues"
+  },
+  "homepage": "https://github.com/NaoyukiMiyazaki/prettier-standard-style-sample#readme"
 }
